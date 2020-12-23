@@ -1,0 +1,23 @@
+.container .details {
+    width: 50%;
+    margin: 70px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.details img {
+    max-width: 250px;
+    width: 100%;
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+@media screen and (max-width: 1090px) {
+    .details {
+      width: 100%;
+    }
+}

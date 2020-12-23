@@ -1,0 +1,62 @@
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+}
+
+@keyframes rotateLoading {
+    0%  {   transform: rotate(0deg);}
+    100% {  transform: rotate(360deg);}
+}
+
+.loading {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    animation: rotateLoading 2s linear infinite;
+}
+
+@keyframes loadingTextOpacity {
+    0%  {opacity: 1}
+    25% {opacity: 0}
+    50% {opacity: 1}
+    75% {opacity: 1}
+    100%{opacity: 1}
+}
+.loader__text {
+    font-size: 40px;
+    font-weight: 300;
+    position: absolute;
+    animation: loadingTextOpacity 2s linear infinite;
+
+}
+
+/*그리드로 인해 영화 2개씩 보여줌*/
+.movies {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    grid-gap: 100px;
+    padding: 50px;
+    width: 80%;
+    padding-top: 70px;
+}
+
+/*화면이 1090px이하면 그리드로 인해 영화 1개씩 보여줌*/
+@media screen and (max-width: 1090px) {
+    .movies {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+}
