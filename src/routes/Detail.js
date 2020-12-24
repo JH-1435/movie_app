@@ -22,11 +22,11 @@ state가 존재하는지 알아보고 존재하지 않으면 componentDidMount()
         const {location} = this.props;
         if (location.state) {
             return (
-            <div className="container">
-                <div className="details">
+            <div className="movieDetail__container">
                     <img src={location.state.poster} 
                     alt={location.state.title} 
                     title={location.state.title} />
+                <div className="movieDetail__data">
                     <h3>{location.state.title}</h3>
                     <h5 className="movie__year">{location.state.year}</h5>
                 <ul className="movie__genres">
